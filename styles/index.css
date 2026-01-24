@@ -7,12 +7,13 @@
     padding: 0;
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;
+    font-size: 1rem;
 }
 
 body {
     background-color: #fdddad;
     padding: 0px;
-    font-size: 1.2rem;
+    
 }
 
 /*navbar*/
@@ -44,7 +45,7 @@ body {
 .start {
     width: 100%;
     overflow: hidden;
-    height: 50em;
+    height: auto;
 }
 
 .flexbox1 {
@@ -72,7 +73,7 @@ body {
     position: absolute;
     padding: 25%;
     z-index: 1;
-    font-size: 2.1vw;
+    font-size: 1.5vw;
 }
 
 .flexbox1text h2 {
@@ -87,9 +88,9 @@ body {
 
 .flexbox1 p {
     color: #dfc5a5 ;
-    font-size: 1.6em;
-    font-family: "Imperial Script", cursive;
-    font-weight: 400;
+    font-size: 1em;
+    font-family: "Imperial Script",;
+    font-weight: 200;
     font-style: normal;
 }
 
@@ -101,46 +102,52 @@ body {
 
 .grid-container {
     display: grid;
-    height: 82rem;
-    gap: 10px;
+    height: auto;
+    width: 100%;
+    padding: 1.2rem;
+    gap: 1.5rem;
     grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
-    margin-top: 1.2rem;
+    grid-template-rows: auto auto;
+    margin-top: 0.4rem;
+    margin-bottom: 1.2rem;
 }
 
 .grid-container section {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-}
-
-/*menu*/
-
-.menu {
-    box-sizing: border-box;
     border-radius: 12px;
-    background-color: #3E2723;
-    height: 57rem;
-    width: 90%;
-    margin: auto;
-}
-
-.flexboxmenu {
-    box-sizing: border-box;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 1rem;
 }
 
+/*menu*/
+
+.menu {
+    box-sizing: border-box;
+    background-color: #3E2723;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.menucontainer {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    gap: 50px;
+}
+
 .menutittle {
+    font-size: 2.5rem;
     color: #fdddad;
     font-family: "Imperial Script", cursive;
     font-weight: 800;
     font-style: normal;
 }
 
-.menugrid {
+.menucontentgrid {
     margin: auto;
     height: 100%;
     width: 95%;
@@ -150,10 +157,11 @@ body {
 .menucontent {
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(6, 15%);
-    height: 100%;
+    /* grid-template-columns: repeat(6, 15%); */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    height: auto;
     width: 100%;
-    gap: 2rem;
+    gap: 1.8rem;
     padding: 0;
     margin: 0;
 }
@@ -164,8 +172,8 @@ body {
     box-sizing: border-box;
     background-color: #fdddad;
     border-radius: 8px;
-    max-width: 300px;
-    height: 90%;
+    max-width: 320px;
+    height: 100%;
 }
 
 .menucontent h3{
@@ -177,6 +185,10 @@ body {
     grid-auto-rows: max-content;
     gap: 1rem;
     padding: 1.5rem 2rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 
@@ -209,26 +221,24 @@ body {
 
 .opinion {
     height: 100%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    width: 100%;
     background-color: #3E2723;
     padding: 5%;
 }
 
 .flexboxopinion {
-    height: 100%;
+    height: 90%;
     width: 100%;
     display: flex;
     background-color: #fdddad;
     margin: auto;
-    height: 100%;
-    width: 90%;
+    padding: 1rem;
     border-radius: 12px;
 }
 
 .opinion h1 {
     color: #fdddad;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: "Imperial Script", cursive;
     font-weight: 800;
     font-style: normal;
@@ -245,19 +255,19 @@ body {
     box-shadow: 10px 6px 37px -13px #3E2723;
     padding: 3%;
     margin: auto;
-    height: 90%;
+    height: 100%;
     width: 30%;
 }
 
 .flexboxopinion img {
-   height: 60%;
-   width: 60%;
+   height: 70%;
+   width: 70%;
    margin-bottom: 5%;
    border-radius: 100%;
 }
 
 .star {
-  font-size: 2rem;
+  font-size: 1.4vw;
   color: #aa3e2b;
   cursor: pointer;
   transition: color 0.2s;
@@ -267,7 +277,7 @@ body {
 
 footer {
     background-color: #3a1711;
-    height: 20rem;
+    height: auto;
     padding: auto;
 }
 
@@ -289,9 +299,27 @@ footer {
     width: 90%;
 }
 
+.footercontainer img {
+    display: flex;
+    height: 33%;
+    width: 22%;
+} 
+
+.coffeanimation img {
+    height: 80%;
+    width: 70%;
+}
+
+.footeraddress img {
+    height: 10%;
+    width: 10%;
+}
+
 .footercontainer .address{
     flex-direction: column;
-    text-align: start;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     font-size: medium;
     color: #dfc5a5;
     font-family: "Merriweather", serif;
@@ -299,11 +327,12 @@ footer {
 }
 
 .address section{
-    height: 25%;
+    height: 50%;
     display: flex;
-    text-align: start;
+    text-align: center;
     align-items: center;
     align-content: center;
+    justify-content: center;
 }
 
 .footercontainer .social{
@@ -316,16 +345,6 @@ footer {
     border-right: #dfc5a5 solid 2.5px;
 }
 
-.footercontainer img {
-    display: flex;
-    height: 45%;
-    width: 25%;
-} 
-
-.coffeanimation img {
-    height: 90%;
-    width: 80%;
-}
 
 .duzdev {
     background-color: #3a1711;
@@ -333,207 +352,39 @@ footer {
     color: #dfc5a5;
 }
 
-@media (max-width:480px){
 
-body {
-    background-color: #dfc5a5 ;
-}
-
-.flexbox1 .flexbox1text {
-    box-sizing: border-box;
-    text-align: center;
-    position: absolute;
-    padding: 25%;
-    z-index: 1;
-    font-size: 2vw;
-}
-
-.flexbox1 p {
-    color: #dfc5a5 ;
-    font-size: 2.5em;
-    font-family: "Imperial Script", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.grid-container {
-    display: grid;
-    height: 130rem;
-    gap: 1.4rem;
-    grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
-    margin-top: -42rem;
-    margin-bottom: 5rem;
-    padding: 0;
-}
-
-/*menu*/
-
-.flexboxmenu {
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    margin: 1%;
-    padding: 1%;
-}
-.menu {
-    box-sizing: border-box;
-    border-radius: 12px;
-    background-color: #3E2723;
-    height: 100%;
-    width: 100%;
-}
-
-.menutittle {
-    color: #fdddad;
-    font-family: "Imperial Script", cursive;
-    font-weight: 800;
-    font-style: normal;
-}
-
-.menucontent {
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-row: 100% 100% 100%;
-    height: 60%;
-    width: 90%;
-    padding: 1%;
-    margin: 0;
-}
-
-/*cards*/
-
-.menucontent div {
-    box-sizing: border-box;
-    background-color: #fdddad;
-    border-radius: 8px;
-    height: 100%;
-    width: 100%;
-}
-
-.menucontent h3{
-    color: #814439;
-    font-size: 1rem;
-}
-
-.card {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    height: 33%;
-    width: 100%;
-}
-
-.cardinfo {
-    display: grid;
-    grid-auto-rows: max-content;
-    gap: 0.8rem;
-    padding: 1.5rem 2rem;
-}
-
-
-.cardtittle {
-    font-size: 1.3rem;
-    font-weight: 1000;
-}
-
-.cardtext {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    font-weight: 200;
-}
-
-.cardfigure {
-    height: 50%;
-    width: 100%;
-    aspect-ratio: 3/2;
-}
-
-.cardimg {
-    border-radius: 8px 8px 0 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-
-/* Opinion */
+@media (max-width:580px) {
 
 .flexboxopinion {
-    height: 100%;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #fdddad;
     margin: auto;
-    gap: 5px;
+    padding: 1rem;
     border-radius: 12px;
-    padding: 2%
 }
 
 .flexboxopinion div {
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
     box-shadow: 10px 6px 37px -13px #3E2723;
     padding: 3%;
     margin: auto;
-    height: 99%;
-    width: 95%;
-}
-
-.opinion h1 {
-    color: #fdddad;
-    font-size: 2.4rem;
-    font-family: "Imperial Script", cursive;
-    font-weight: 800;
-    font-style: normal;
-}
-
-.opinion h2 {
-    font-size: 1rem;
+    height: 100%;
+    width: 100%;
 }
 
 .flexboxopinion img {
-   height: 30%;
-   width: 30%;
+   height: 50%;
+   width: 50%;
    margin-bottom: 5%;
    border-radius: 100%;
-}
-
-.star {
-  font-size: 0.8rem;
-  color: #aa3e2b;
-  cursor: pointer;
-  transition: color 0.2s;
-  display: flex;
-}
-
-.footercontainer .social{
-    flex-direction: column;
-    color: #dfc5a5;
-    font-size: 0.8rem;
-    font-family: "Merriweather", serif;
-    font-optical-sizing: auto;
-    border-left: #dfc5a5 solid 2.5px;
-    border-right: #dfc5a5 solid 2.5px;
-}
-
-.footercontainer img {
-    display: flex;
-    height: 25%;
-    width: 25%;
-} 
-
-.coffeanimation img {
-    height: 90%;
-    width: 80%;
 }
 
 }
