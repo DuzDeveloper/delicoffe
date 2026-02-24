@@ -24,6 +24,8 @@ body {
     justify-content: space-between;
     height: 4em;
     padding: 0px 10%;
+    position: relative; 
+    z-index: 10;  
 }
 
 .navbar .logo {
@@ -368,6 +370,10 @@ footer {
     width: 13%;
 }
 
+.socialicons img:hover {
+    scale: 1.1;
+}
+
 .coffeeimg {
     height: 80%;
     width: 50%;
@@ -399,7 +405,9 @@ footer {
     justify-content: space-between;
     height: 4.3rem;
     width: 100%;
-    padding: 0px 10%
+    padding: 0px 10%;
+    position: relative; 
+    z-index: 10; 
 }
 
 .menu-mobile {
@@ -407,7 +415,7 @@ footer {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 2.5rem; 
+    width: 10%; 
 }
 
 .summary {
@@ -418,14 +426,26 @@ footer {
     align-items: center;
 }
 
+.menu-button {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
 details ul {
     display: flex;
     flex-direction: column;
-    background: #0a0a2e; 
+    background: #3E2723; 
     padding: 10px;
     position: absolute;
     right: 0;
     width: 100%;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+details a {
+    text-decoration: none;
+    color: #dfc5a5;
 }
 
 details summary::-webkit-details-marker {
