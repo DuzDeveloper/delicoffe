@@ -19,10 +19,10 @@ body {
 
 .navbar {
     display: flex; 
+    height: 4em;
     margin: 0;
     background-color: #3E2723;
     justify-content: space-between;
-    height: 4em;
     padding: 0px 10%;
     position: relative; 
     z-index: 10;  
@@ -47,7 +47,6 @@ body {
     color: beige;
 }
 
-
 .navbar-mobile {
     display: none;
 }
@@ -64,10 +63,10 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-content: center;
     height: 100%;
     width: 100%;
+    justify-content: center;
+    align-content: center;
 }
 
 .flexbox1wallpaper {
@@ -159,9 +158,9 @@ body {
 }
 
 .menucontentgrid {
-    margin: 2rem 0rem;
     height: 100%;
     width: 100%;
+    margin: 2rem 0rem;
     border-radius: 12px;
 }
 
@@ -181,9 +180,10 @@ body {
 .menucontent div {
     box-sizing: border-box;
     background-color: #fdddad;
+    height: 100%;
     border-radius: 8px;
     max-width: 320px;
-    height: 100%;
+    
     transition: 1s ease-in-out;
 }
 
@@ -229,8 +229,8 @@ body {
 
 .cardimg {
     border-radius: 8px 8px 0 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
     display: block;
 }
@@ -254,10 +254,10 @@ body {
 }
 
 .flexboxopinion {
-    height: 90%;
-    width: 90%;
     display: flex;
     position: relative;
+    height: 90%;
+    width: 90%;
     background-image: url('/img/texture2.png');
     background-repeat: repeat;
     margin: auto;
@@ -317,11 +317,11 @@ footer {
 .footercontainer div {
     box-sizing: border-box;
     display: flex;
+    height: 90%;
+    width: 90%;
     justify-content: center;
     align-items: center;
     margin: auto;
-    height: 90%;
-    width: 90%;
 }
 
 .footercontainer .address{
@@ -390,6 +390,8 @@ footer {
     color: #dfc5a5;
 }
 
+/*Responsive*/
+
 @media (max-width:580px) {
 
 /*Welcome*/
@@ -400,12 +402,12 @@ footer {
 
 .navbar-mobile {
     display: flex; 
-    margin: 0;
     background-color: #3E2723;
     justify-content: space-between;
     height: 4.3rem;
     width: 100%;
     padding: 0px 10%;
+    margin: 0;
     position: relative; 
     z-index: 10; 
 }
@@ -434,11 +436,11 @@ footer {
 details ul {
     display: flex;
     flex-direction: column;
-    background: #3E2723; 
-    padding: 10px;
+    background: #3E2723;  
     position: absolute;
-    right: 0;
     width: 100%;
+    right: 0;
+    padding: 10px;
     margin-top: 1rem;
     gap: 1rem;
 }
@@ -446,10 +448,6 @@ details ul {
 details a {
     text-decoration: none;
     color: #dfc5a5;
-}
-
-details summary::-webkit-details-marker {
-    display: none;
 }
 
 /*Welcome*/
@@ -490,9 +488,9 @@ details summary::-webkit-details-marker {
 .menucontent div {
     box-sizing: border-box;
     background-color: #fdddad;
+    height: 100%;
     border-radius: 8px;
     max-width: 320px;
-    height: 100%;
 }
 
 .menucontent div:hover {
